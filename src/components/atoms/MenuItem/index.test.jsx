@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MenuItem } from '.';
 
+// TODO: Add router to test, test router onClick method
+
 test('renders correctly', () => {
   render(<MenuItem />);
 });
