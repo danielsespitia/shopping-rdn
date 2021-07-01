@@ -8,18 +8,21 @@ const sections = [
     title: 'Hats',
     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     linkUrl: 'hats',
+    isNavegable: true,
   },
   {
     id: 2,
     title: 'Jackets',
     imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
     linkUrl: '',
+    isNavegable: true,
   },
   {
     id: 3,
     title: 'Sneakers',
     imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
     linkUrl: '',
+    isNavegable: true,
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ const sections = [
     imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
     size: 'large',
     linkUrl: '',
+    isNavegable: true,
   },
   {
     id: 5,
@@ -34,6 +38,7 @@ const sections = [
     imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     size: 'large',
     linkUrl: '',
+    isNavegable: true,
   },
 ];
 
@@ -44,7 +49,7 @@ export const Home = () => {
 
   return (
     <div className="homepage">
-      <Directory sections={sectionsWithUpperCasedTitles} isNavigable />
+      <Directory sections={sectionsWithUpperCasedTitles} />
     </div>
   );
 };

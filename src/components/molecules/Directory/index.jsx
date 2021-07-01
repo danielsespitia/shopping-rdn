@@ -1,20 +1,15 @@
 import React from 'react';
-import { MenuItem, RoutedMenuItem } from '../..';
+import { MenuItem } from '../..';
 
 import './index.styles.scss';
 
-export const Directory = ({ sections, isNavigable }) => {
-  console.log(isNavigable);
+export const Directory = ({ sections }) => {
   return (
     <div className="directory" data-testid="directory">
       {!!sections &&
-        sections.map(({ id, ...otherSectionProps }) =>
-          !isNavigable ? (
-            <MenuItem key={id} {...otherSectionProps} />
-          ) : (
-            <RoutedMenuItem key={id} {...otherSectionProps} />
-          )
-        )}
+        sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
+        ))}
     </div>
   );
 };
