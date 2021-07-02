@@ -1,6 +1,5 @@
 // Packages
 import React from 'react';
-
 // Styles
 import './index.styles.scss';
 

@@ -1,5 +1,8 @@
+// Packages
 import React from 'react';
+// Components
 import { Directory } from '../../components';
+// Styles
 import './index.styles.scss';
 
 const sections = [

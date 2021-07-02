@@ -1,5 +1,7 @@
+// Packages
 import React from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
+// Styles
 import './index.styles.scss';
 
 export const MenuItem = ({ title, imageUrl, size, linkUrl, isNavegable }) => {

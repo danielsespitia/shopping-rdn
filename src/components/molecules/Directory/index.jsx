@@ -1,6 +1,8 @@
+// Packages
 import React from 'react';
+// Components
 import { MenuItem } from '../..';
-
+// Styles
 import './index.styles.scss';
 
 export const Directory = ({ sections }) => {
