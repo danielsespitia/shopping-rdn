@@ -17,7 +17,7 @@ export const Header = ({ options }) => {
       <div className="options">
         {!!options &&
           options.map((option) => (
-            <Link className="option" to={`/${option}`}>
+            <Link key={option} className="option" to={`/${option}`}>
               {switchToUpperCase(option)}
             </Link>
           ))}
