@@ -1,7 +1,7 @@
 // Packages
 import React, { Component } from 'react';
 // Components
-import { FormInput } from '../../components';
+import { FormInput, CustomButton } from '../../components';
 // Styles
 import './index.styles.scss';
 
@@ -29,6 +29,9 @@ export class SignIn extends Component {
 
   render() {
     const fields = ['email', 'password'];
+    const capitalizeFirstLetter = (field) =>
+      field.charAt(0).toUpperCase() + field.slice(1);
+
     return (
       <div className="sign-in">
         <h2>I already have an account</h2>
@@ -42,11 +45,12 @@ export class SignIn extends Component {
                 name={field}
                 type={field}
                 handleChange={this.handleChange}
-                label={field}
+                label={capitalizeFirstLetter(field)}
                 value={`${this.state[field]}`}
                 required
               />
             ))}
+          <CustomButton type="submit">Sign In</CustomButton>
         </form>
       </div>
     );

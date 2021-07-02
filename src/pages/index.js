@@ -1,3 +1,3 @@
 export * from './HomePage';
 export * from './ShopPage';
-export * from './SignInPage';
+export * from './AccessPage';

@@ -3,6 +3,4 @@ import React from 'react';
 // Container
 import { Home } from '../../containers';
 
-export const HomePage = () => {
-  return <Home />;
-};
+export const HomePage = () => <Home />;

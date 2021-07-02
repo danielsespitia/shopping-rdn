@@ -6,7 +6,6 @@ import { CollectionItem } from '../../atoms';
 import './index.styles.scss';
 
 export const CollectionPreview = ({ title, items }) => {
-  console.log(title, items);
   const upperCaseTitle = title.toUpperCase();
   return (
     <div className="collection-preview">

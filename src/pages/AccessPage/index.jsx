@@ -3,6 +3,6 @@ import React from 'react';
 // Components
 import { SignIn } from '../../containers';
 
-export const SignInPage = () => {
+export const AccessPage = () => {
   return <SignIn />;
 };
