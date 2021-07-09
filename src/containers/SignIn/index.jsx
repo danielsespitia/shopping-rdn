@@ -16,22 +16,20 @@ export class SignIn extends Component {
     };
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    this.setState({ email: '', password: '' });
-  };
-
   handleChange = (event) => {
     const { value, name } = event.target;
 
     this.setState({ [name]: value });
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    this.setState({ email: '', password: '' });
+  };
+
   render() {
-    const fields = ['email', 'password'];
-    const capitalizeFirstLetter = (field) =>
-      field.charAt(0).toUpperCase() + field.slice(1);
+    const { fields, labelName } = this.props;
 
     return (
       <div className="sign-in">
@@ -46,7 +44,7 @@ export class SignIn extends Component {
                 name={field}
                 type={field}
                 handleChange={this.handleChange}
-                label={capitalizeFirstLetter(field)}
+                label={labelName(field)}
                 value={`${this.state[field]}`}
                 required
               />
