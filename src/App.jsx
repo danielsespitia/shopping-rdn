@@ -5,19 +5,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 // Components
 import { HomePage, ShopPage, AccessPage } from './pages';
-import { Header } from './components';
+import { ConnectedHeader } from './components';
 // Styles
 import './App.css';
 
 // TODO: Implementar pruebas con router, a forms, desbaratar styling de FormInput component para entender transición
-
+// TODO: Implementar pruebas de iniciar sesión
+// TODO: Implementar pruebas de redux
 class App extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      currentUser: null,
-    };
+    this.state = {};
   }
 
   unsubscribeFromAuth = null;
@@ -54,7 +53,7 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <Header options={options} currentUser={this.state.currentUser} />
+          <ConnectedHeader options={options} />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/shop" component={ShopPage} />
