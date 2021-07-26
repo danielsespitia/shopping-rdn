@@ -1,7 +1,7 @@
 // Packages
 import React from 'react';
 // Components
-import { NavItem } from '../../atoms';
+import { ConnectedCartIcon, NavItem } from '../../';
 // Styles
 import './index.styles.scss';
 
@@ -20,6 +20,7 @@ export const NavItems = ({ options, currentUser, logOut }) => {
       ) : (
         <NavItem name="sign-in"></NavItem>
       )}
+      <ConnectedCartIcon />
     </div>
   );
 };
