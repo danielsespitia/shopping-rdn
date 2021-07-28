@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // Components
-import { CrownLogo, NavItems, ConnectedCartDropdown } from '../../';
+import { CrownLogo, NavItems, CartDropdown } from '../../';
 // Utils
 import { auth } from '../../../firebase/firebase.utils';
 // Styles
@@ -16,7 +16,7 @@ const Header = ({ options, currentUser, hidden }) => {
     <header className="header">
       <CrownLogo />
       <NavItems options={options} currentUser={currentUser} logOut={logOut} />
-      {!hidden && <ConnectedCartDropdown />}
+      {!hidden && <CartDropdown />}
     </header>
   );
 };
