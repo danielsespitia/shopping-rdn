@@ -1,7 +1,7 @@
 // Packages
 import React from 'react';
 // Components
-import { CollectionItem } from '../../atoms';
+import { ConnectedCollectionItem } from '../../atoms';
 // Styles
 import './index.styles.scss';
 
@@ -14,8 +14,8 @@ export const CollectionPreview = ({ title, items }) => {
         {items
           // Performance issues (gets re-rendered on every call)
           .filter((item, idx) => idx < 4)
-          .map(({ id, ...collectionItemProps }) => (
-            <CollectionItem key={id} {...collectionItemProps} />
+          .map((item) => (
+            <ConnectedCollectionItem key={item.id} item={item} />
           ))}
       </div>
     </div>
