@@ -1,6 +1,8 @@
 // Packages
 import React from 'react';
 import { connect } from 'react-redux';
+// Selectors
+import { selectCartItems } from '../../../redux/cart/cart.selectors';
 // Components
 import { CartItem } from '../../';
 // Styles
@@ -13,8 +15,8 @@ export const CartItems = ({ cartItems }) => (
   </div>
 );
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-  cartItems,
+const mapStateToProps = (state) => ({
+  cartItems: selectCartItems(state),
 });
 
 export const ConnectedCartItems = connect(mapStateToProps)(CartItems);
