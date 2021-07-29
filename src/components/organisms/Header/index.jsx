@@ -1,6 +1,10 @@
 // Packages
 import React from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+// Selectors
+import { selectCartHidden } from '../../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../../redux/user/user.selectors';
 // Components
 import { CrownLogo, NavItems, CartDropdown } from '../../';
 // Utils
@@ -21,9 +25,9 @@ const Header = ({ options, currentUser, hidden }) => {
   );
 };
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  currentUser,
-  hidden,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
 });
 
 export const ConnectedHeader = connect(mapStateToProps)(Header);
