@@ -1,9 +1,6 @@
 // Packages
 import React from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-// Selectors
-import { selectCartItems } from '../../../redux/cart/cart.selectors';
+
 // Components
 import { CartItem } from '../../';
 // Styles
@@ -17,9 +14,3 @@ export const CartItems = ({ cartItems }) => (
       ))}
   </div>
 );
-
-const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-});
-
-export const ConnectedCartItems = connect(mapStateToProps)(CartItems);
