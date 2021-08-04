@@ -1,6 +1,5 @@
 // Packages
 import React from 'react';
-
 // Components
 import { CartItem } from '../../';
 // Styles
