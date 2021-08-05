@@ -1,6 +1,6 @@
 // Packages
 import React from 'react';
 // Container
-import { Shop } from '../../containers';
+import { ConnectedShop } from '../../containers';
 
-export const ShopPage = () => <Shop />;
+export const ShopPage = () => <ConnectedShop />;

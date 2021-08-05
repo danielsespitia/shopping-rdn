@@ -1,6 +1,6 @@
 // Packages
 import React from 'react';
 // Container
-import { Home } from '../../containers';
+import { ConnectedHome } from '../../containers';
 
-export const HomePage = () => <Home />;
+export const HomePage = () => <ConnectedHome />;
