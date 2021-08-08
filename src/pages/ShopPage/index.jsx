@@ -1,6 +1,17 @@
 // Packages
 import React from 'react';
-// Container
-import { ConnectedShop } from '../../containers';
+import { Route } from 'react-router-dom';
+// Components
+import { ConnectedCollectionsOverview } from '../../components';
 
-export const ShopPage = () => <ConnectedShop />;
+export const ShopPage = ({ match }) => {
+  return (
+    <div className="shop-page">
+      <Route
+        exact
+        path={`${match.path}`}
+        component={ConnectedCollectionsOverview}
+      />
+    </div>
+  );
+};

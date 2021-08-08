@@ -15,6 +15,7 @@ import { setCurrentUser } from './redux/user/user.actions';
 // Components
 import { HomePage, ShopPage, AccessPage, CheckoutPage } from './pages';
 import { ConnectedHeader } from './components';
+import { ConnectedCollectionContainer } from './containers';
 // Selectors
 import { selectCurrentUser } from './redux/user/user.selectors';
 // Styles
@@ -62,6 +63,10 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/shop" component={ShopPage} />
+            <Route
+              path={`/shop/:collectionId/`}
+              component={ConnectedCollectionContainer}
+            />
             <Route exact path="/checkout" component={CheckoutPage} />
             <Route
               exact

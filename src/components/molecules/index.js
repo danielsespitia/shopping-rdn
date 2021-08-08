@@ -4,3 +4,4 @@ export * from './NavItems';
 export * from './CartItems';
 export * from './CheckoutHeader';
 export * from './CheckoutItems';
+export * from './CollectionsOverview';
