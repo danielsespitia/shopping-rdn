@@ -6,3 +6,4 @@ export * from './NavItem';
 export * from './CustomButton';
 export * from './CartIcon';
 export * from './CartItem';
+export * from './StripeButton';
